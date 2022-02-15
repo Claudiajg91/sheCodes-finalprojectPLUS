@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Carbic's weather app</title>
+        <meta charset="UTF-8" />
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+      />
+
+        <link href="src/styles.css" rel="stylesheet" type="text/css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+
+        <script
+          src="https://kit.fontawesome.com/7ecb936eb0.js"
+          crossorigin="anonymous"
+        ></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Enter your city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-outline-success search-btn"
+                  id="submit"
+                />
+              </div>
+              <div class="col-3">
+                    
+                <button type="button" class="btn btn-outline-primary current-btn" id="current-button"><i class="fas fa-map-marker-alt"></i> </button>
+              </div>
+            </div>
+          </form>
+          <h1 id="city">Houston</h1>
+          <ul>
+            <li id="date"></li>
+            <li id="description">Partly Cloudy</li>
+          </ul>
+      
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  id="icon"
+                  alt="Cloudy icon"
+                  class="weather-icon float-left"
+                />
+                <div class="float-left">
+                  <span class="temperature" id="temperature">19</span>
+                  <span class="units"
+                    ><a href="#" id="celsius" class="active">°C |</a>
+                    <a href="#" id="fahrenheit">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Feels like: <span id="feels-like-value">18</span>°C</li>
+                <li>Humidity: <span id="humidity">77 </span>%</li>
+                <li>Wind: <span id="wind">8</span> km/h</li>
+                <li>Pressure: <span id="pressure">10.73</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
+        <div>
+          <small class="open-source">
+            <a
+              href="https://github.com/Claudiajg91/shecodesplus-semana7"
+              target="_blank"
+              >Open-source code</a
+            >
+            by Claudia Juárez
+          </small>
+        </div>
+      </div>
+      <script src="src/index.js"></script>
+  </body>
+</html>
