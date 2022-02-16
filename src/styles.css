@@ -93,9 +93,7 @@ body {
   input[type="search"] {
     position: relative;
     padding: 0 40px;
-    color: white;
-    background: black;
-    border: none;
+    background: white;
     border-radius: 25px 0 0 25px;
     font-family: "Roboto Mono", monospace;
     box-sizing: border-box;
