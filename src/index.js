@@ -25,8 +25,7 @@ function getForecast(coordinates) {
     win.innerHTML = `${currentWind}`;
     pressure.innerHTML = `${airPressure}hPa`;
     currentIcon.setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      "src", `src/images/${response.data.weather[0].icon}.svg`
     );
     currentIcon.setAttribute("alt", response.data.weather[0].description);
   
@@ -113,13 +112,7 @@ function getForecast(coordinates) {
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
                 )}</div>
-                <img
-                  src="http://openweathermap.org/img/wn/${
-                    forecastDay.weather[0].icon
-                  }@2x.png"
-                  alt=""
-                  width="42"
-                />
+                <img src="src/images/${forecastDay.weather[0].icon}.svg" alt="#" width="50" />
                 <div class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperatures-max"> ${Math.round(
                     forecastDay.temp.max

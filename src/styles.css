@@ -14,19 +14,27 @@ body {
   }
   
   ul {
-    margin: 0 0 10px;
+    margin: 0 0 15px;
     padding: 0;
   }
   
+  .titles{
+    font-weight: bold;
+  }
   li {
     color: black;
     font-size: 16px;
-    font-weight: 100;
-    height: 19px;
-    line-height: 1;
+    font-weight:lighter;
+    height: 20px;
+    line-height:1;
     list-style: none;
     text-transform: capitalize;
     font-family: "Roboto Mono", monospace;
+  }
+
+  a{
+    text-decoration: none;
+    color:white;
   }
   
   .weather-app {
@@ -38,6 +46,21 @@ body {
     margin-bottom: 0px;
     background: white
   }
+  .clearfix{
+    display: flex;
+    flex-direction: row;
+}
+
+.float-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: unset;
+
+}
+  #icon{
+    margin-top: 5px;
+}
   
   .weather-icon {
     height: 64px;
@@ -54,7 +77,10 @@ body {
   
   .units {
     position: relative;
-    top: -34px;
+    top: -25px;
+      display: block;
+      font-family: "Roboto Mono", monospace;
+      font-size: 15px;
   }
   
   #celsius{
@@ -64,13 +90,15 @@ body {
   color: black;
   }
 
-
   input[type="search"] {
     position: relative;
     padding: 0 40px;
-    background: white;
+    color: white;
+    background: black;
+    border: none;
     border-radius: 25px 0 0 25px;
     font-family: "Roboto Mono", monospace;
+    box-sizing: border-box;
     font-size: 15px;
     outline: none;
     width: 400px;
@@ -82,7 +110,7 @@ body {
     left: -10px;
   }
   .search-btn {
-    padding: 16.5px 23px;
+    padding: 19px 23px;
     color: white;
     background: black;
     font-size: 15px;
@@ -93,7 +121,7 @@ body {
     outline: none;
     box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
     position: relative;
-    top: 10px;
+    top: 5px;
     left: 20px;
   }
   
@@ -112,8 +140,8 @@ body {
     outline: none;
     box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
     position: relative;
-    top: 10px;
-    left: -7px;
+    top: 5px;
+    left: -40px;
   }
   .current-btn:hover {
     color: white;
@@ -125,7 +153,7 @@ body {
   }
 
   .open-source {
-    max-width: 600px;
+    max-width: 730px;
     display: block;
     margin: 20px auto;
     margin-top: 0px;
